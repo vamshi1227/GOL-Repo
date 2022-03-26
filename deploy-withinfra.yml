@@ -19,17 +19,17 @@
   - name: launching ec2 instance
     ec2:
       instance_type: t2.micro
-      key_name: sankar-devops
-      image: ami-0c78cdf6791bffb6f
+      key_name: vamshi-devops
+      image: ami-02699cdf31cfe6a2d
       region: us-east-2
-      group: launch-wizard-25
+      group: launch-wizard-4
       count: 1
       wait: yes
       wait_timeout: 500
       instance_tags: 
             name: webserver
       assign_public_ip: yes
-      vpc_subnet_id: subnet-26c7f36a
+      vpc_subnet_id: subnet-0887de9f93399fdfe
     register: ec2  
   - name: Add Instance IP into in-memory inventory file not into hosts file
     add_host: 
